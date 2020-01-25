@@ -1,0 +1,23 @@
+{
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "never",
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.snippetSuggestions": "top",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "razor": "html",
+    "plaintext": "jade"
+  },
+  "emmet.preferences": {
+    "css.webkitProperties": "border-right,animation",
+    "css.mozProperties": "",
+    "css.oProperties": null,
+    "css.msProperties": null
+  },
+  "emmet.syntaxProfiles": {
+    "html": {
+      "filters": "bem"
+    }
+  }
+}
