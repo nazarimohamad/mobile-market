@@ -13,7 +13,6 @@ export default class Modal extends Component {
             <ProductConsumer>
               {value => {
                 const isModalOpen = value.isModalOpen;
-                console.log(isModalOpen)
                 const {id, img, title, price } = value.detailProduct;
                 if(!isModalOpen) {
                     return null

@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Detail from "./components/Detail";
 import Default from "./components/Default";
-import Cart from "./components/Cart";
+import Cart from "./components/cart/";
 import Modal from './components/Modal';
 
 function App() {
