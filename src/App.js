@@ -1,13 +1,13 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import './App.css';
+import React from "react";
+import {Switch, Route} from "react-router-dom";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Detail from "./components/Detail";
 import Default from "./components/Default";
 import Cart from "./components/cart/";
-import Modal from './components/Modal';
+import Modal from "./components/Modal";
 
 function App() {
   return (

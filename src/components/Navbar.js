@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
-import { Link } from "react-router-dom";
-import logo from '../logo.svg'
-import styled from 'styled-components'
-import { ButtonContainer } from './Button'
-
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import logo from "../logo.svg";
+import styled from "styled-components";
+import {ButtonContainer} from "./Button";
 
 export default class Navbar extends Component {
   render() {
@@ -14,7 +13,9 @@ export default class Navbar extends Component {
         </Link>
         <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">products</Link>
+            <Link to="/" className="nav-link">
+              products
+            </Link>
           </li>
         </ul>
         <Link to="/cart" className="ml-auto">
@@ -26,10 +27,9 @@ export default class Navbar extends Component {
           </ButtonContainer>
         </Link>
       </NavWrapper>
-    )
+    );
   }
 }
-
 
 const NavWrapper = styled.nav`
   background: var(--mainBlue);
@@ -38,4 +38,4 @@ const NavWrapper = styled.nav`
     font-size: 1.3rem;
     text-transform: capitalize;
   }
-`
+`;
