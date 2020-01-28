@@ -6,14 +6,11 @@ import {ButtonContainer} from "./Button";
 
 export default class Modal extends Component {
   render() {
-    // if(!isModalOpen) {
-    //   return null
-    // } else {
     return (
       <ProductConsumer>
         {value => {
-          const isModalOpen = value.isModalOpen;
-          const {id, img, title, price} = value.detailProduct;
+          const {isModalOpen, closeModal} = value;
+          const {img, title, price} = value.detailProduct;
           if (!isModalOpen) {
             return null;
           } else {
@@ -21,13 +18,21 @@ export default class Modal extends Component {
               <ModalContainer>
                 <div className="container">
                   <div className="row">
-                    <div className="card col-8 mx-auto col-md-6 col-lg-4" id="modal">
-                      <img src={img} alt={title} className="card-image img-fluid" />
-                      <h2>{title}</h2>
-                      <h4>price: ${price}</h4>
+                    <div
+                      className="col-8 mx-auto col-md-6 col-lg-4 p-5 text-center text-capitalize"
+                      id="modal"
+                    >
+                      <h5>item added to cart</h5>
+                      <img src={img} className="img-fluid" alt="" />
+                      <h5>{title}</h5>
+                      <h5 className="text-muted">price : ${price}</h5>
                       <Link to="/">
-                        <ButtonContainer onClick={value.closeModal}>
-                          Go To Store
+                        <ButtonContainer
+                          onClick={() => {
+                            closeModal();
+                          }}
+                        >
+                          Go to Store
                         </ButtonContainer>
                       </Link>
                       <Link to="/cart">
@@ -59,11 +64,11 @@ const ModalContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  // color: var(--mainWhite);
   background: rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   #modal {
+    background: var(--mainWhite);
   }
 `;
